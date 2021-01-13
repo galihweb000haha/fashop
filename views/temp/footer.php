@@ -1,5 +1,6 @@
 	
 	<!-- modals login -->
+	<form action="./functions/login.php" method="post">
 	<div id="containerModal" class="hidden">
 		<div id="modalLogin">
 			<span id="closeModalButton"><i class="fas fa-times"></i></span>
@@ -8,9 +9,9 @@
 				PICTURE
 			</div>
 			<form>
-				<input type="text" name="username" placeholder="Username">
+				<input type="text" name="username" placeholder="Username" autocomplete="off">
 				<input type="password" name="password" placeholder="Password">
-				<div id="login-btn">LOGIN</div>
+				<center><button type="submit" id="login-btn">LOGIN</button></center>
 				<center>
 					<a href="#">Forgot username/password</a><br>
 					<a href="#">Create your account</a>	
@@ -18,6 +19,7 @@
 			</form>
 		</div>
 	</div>
+	</form>
 	<!-- end modals login -->
 
 	<!-- brands -->

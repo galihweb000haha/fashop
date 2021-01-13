@@ -1,3 +1,4 @@
+<?php require './koneksi.php' ?>
 <!DOCTYPE html>
 <html>
 <head>	

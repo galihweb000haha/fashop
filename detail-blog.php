@@ -1,4 +1,3 @@
-	<?php require "koneksi.php" ?>
 	<?php require "views/temp/header.php" ?>
 
 	<link rel="stylesheet" type="text/css" href="assets/css/pages/detail-blog.style.css">

@@ -1,15 +1,16 @@
 <?php
-//Koneksi ke database
-$server   = "localhost";
-$username = "root";
-$password = "";
-$database = "fashop_db";
-  
-$mysqli = new mysqli ($server, $username, $password, $database);
+session_start();
+
+$databaseHost = 'localhost';
+$databaseName = 'fashop'; // NAMA DATABASE
+$databaseUsername = 'root'; // USERNAME DATABASE
+$databasePassword = ''; //PASSWORD DATABASE
+
+// MENGHUBUNGKAN DATABASE
+$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+
+// JIKA DATABASE TIDAK ADA ATAU TIDAK TERSAMBUNG
 if (mysqli_connect_errno()) {
-    echo 'Koneksi gagal dilakukan dengan alasan : '.mysqli_connect_error();
+    printf("%s \n", mysqli_connect_error());
     exit();
-    mysqli_close($mysqli);
-} 
-//Akhir Koneksi---------------------------------------------------------
-?>
+}

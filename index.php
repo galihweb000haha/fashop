@@ -1,6 +1,37 @@
-	<?php require "koneksi.php" ?>
 	<?php require "views/temp/header.php" ?>
+	<?php 
+	if (isset($_GET['error'])){
+		echo "<script>alert('Username atau Password Salah!')</script>";
+		echo "<script>document.location.href='index.php'</script>";
+	}else{
+		$result1 = mysqli_query(
+			$mysqli, 
+			"SELECT barang.*, barang.id AS id_barang, brand.* FROM barang
+			JOIN brand ON brand.id = barang.brand
+			ORDER BY barang.id DESC"
+		);
+		$result2 = mysqli_query(
+			$mysqli, 
+			"SELECT barang.*, barang.id AS id_barang, brand.* FROM barang
+			JOIN brand ON brand.id = barang.brand
+			ORDER BY barang.id ASC"
+		);	
 
+	}
+	if(isset($_GET['feedback'])){
+		echo "<script>alert('Selamat Berbelanja!')</script>";
+	}
+
+	
+	if(isset($_GET['id'])){		
+		setcookie('id'.(count($_COOKIE)-1), $_GET['id'], time()+3600);
+
+		echo "<script>alert('Barang telah ditambahkan!')</script>";
+		echo "<script>document.location.href='index.php'</script>";		
+
+	}
+	
+	?>
 	<link rel="stylesheet" type="text/css" href="assets/css/pages/index.style.css">	
 
 	<!-- banner -->
@@ -64,81 +95,31 @@
 			<input type="text" name="" placeholder="Search product">
 			<div class="search-btn"><i class="fas fa-search"></i></div>
 			<span style="font-size: 12px;float: right; font-weight: bold;">12 PRODUCTS FOUND</span>
-			<section>
+			<section>			
+			<?php while ($res = mysqli_fetch_array($result1)) : ?>
 				<div class="product">
-					<img src="assets/img/products/product-1.png">
+					<img src="upload/products/<?=$res['gambar']?>">
 					<div class="desc">
-						<span class="brand-name">ZARA</span>						
-						<h4><u><a href="detail-product.php">Seven Peaks Mens Jacket & Handsome Men</a></u></h4>
-						<span class="price"><i>Rp.170.000,00</i></span>
-						<div class="button-buy">ADD TO CART</div>
+						<span class="brand-name"><?=$res['brand']?></span>						
+						<h4><u><a href="detail-product.php"><?=$res['nama']?></a></u></h4>
+						<span class="price"><i><?=$res['harga']?></i></span>
+						<a href="index.php?id=<?=$res['id_barang']?>"><div class="button-buy">ADD TO CART</div></a>
 					</div>				
 				</div>
-				<div class="product">
-					<img src="assets/img/products/product-2.png">
-					<div class="desc">
-						<span class="brand-name">RIVER ISLAND</span>						
-						<h4><u><a href="detail-product.php">Thatcher Oxford Shirt With The Smilling Father</a></u></h4>
-						<span class="price"><i>Rp.249.900,00</i></span>
-						<div class="button-buy">ADD TO CART</div>
-					</div>					
-				</div>
-				<div class="product">
-					<img src="assets/img/products/product-3.png">
-					<div class="desc">
-						<span class="brand-name">MANGO</span>						
-						<h4><u><a href="detail-product.php">Double Breasted Coat In Navy Wool & Cashmere Blend by</a></u></h4>
-						<span class="price"><i>Rp.165.000,00</i></span>
-						<div class="button-buy">ADD TO CART</div>
-					</div>	
-				</div>
-				<div class="product">
-					<img src="assets/img/products/product-4.jpg">
-					<div class="desc">
-						<span class="brand-name">MANGO</span>						
-						<h4><u><a href="detail-product.php">Women's Notched Lapel Double Breasted Long Trench</a></u></h4>
-						<span class="price"><i>Rp.369.900,00</i></span>
-						<div class="button-buy">ADD TO CART</div>
-					</div>	
-				</div>			
+			<?php endwhile; ?>						
 			</section>
 			<section>
-				<div class="product">
-					<img src="assets/img/products/product-4.jpg">
+			<?php while ($res = mysqli_fetch_array($result2)) : ?>
+					<div class="product">
+					<img src="upload/products/<?=$res['gambar']?>">
 					<div class="desc">
-						<span class="brand-name">MANGO</span>						
-						<h4><u><a href="detail-product.php">Women's Notched Lapel Double Breasted Long Trench</a></u></h4>
-						<span class="price"><i>Rp.369.900,00</i></span>
-						<div class="button-buy">ADD TO CART</div>
-					</div>	
-				</div>	
-				<div class="product">
-					<img src="assets/img/products/product-3.png">
-					<div class="desc">
-						<span class="brand-name">MANGO</span>						
-						<h4><u><a href="detail-product.php">Double Breasted Coat In Navy Wool & Cashmere Blend by</a></u></h4>
-						<span class="price"><i>Rp.165.000,00</i></span>
-						<div class="button-buy">ADD TO CART</div>
-					</div>	
-				</div>
-				<div class="product">
-					<img src="assets/img/products/product-2.png">
-					<div class="desc">
-						<span class="brand-name">RIVER ISLAND</span>						
-						<h4><u><a href="detail-product.php">Thatcher Oxford Shirt With The Smilling Father</a></u></h4>
-						<span class="price"><i>Rp.249.900,00</i></span>
-						<div class="button-buy">ADD TO CART</div>
-					</div>					
-				</div>
-				<div class="product">
-					<img src="assets/img/products/product-1.png">
-					<div class="desc">
-						<span class="brand-name">ZARA</span>						
-						<h4><u><a href="detail-product.php">Seven Peaks Mens Jacket & Handsome Men</a></u></h4>
-						<span class="price"><i>Rp.170.000,00</i></span>
+						<span class="brand-name"><?=$res['brand']?></span>						
+						<h4><u><a href="detail-product.php"><?=$res['nama']?></a></u></h4>
+						<span class="price"><i><?=$res['harga']?></i></span>
 						<div class="button-buy">ADD TO CART</div>
 					</div>				
-				</div>		
+				</div>
+			<?php endwhile; ?>		
 			</section>
 			<section class="hidden" id="sectionHide">
 				<div class="product">
