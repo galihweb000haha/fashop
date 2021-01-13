@@ -1,0 +1,213 @@
+	/*header*/
+	header{	
+		width: 100%;
+		height: 100px;
+		background-color: #fff;
+		font-family: cremona;
+		position: relative;
+		box-shadow: 0 .2px 6px #ddd;
+		position: fixed;
+		z-index: 999;
+	}
+	.head-left h2{
+		display: inline-block;
+		line-height: 100px;
+		cursor: pointer;
+		width: 150px;
+		padding-left: 100px;
+		padding-right: 30px;
+	}
+	.head-left ul{	
+		height: 50px;	
+		display: inline-block;
+	}
+	.head-left ul li{
+		display: inline-block;	
+		height: 50px;
+		line-height: 50px;
+		padding: 0 10px;
+		cursor: pointer;		
+	}
+	.head-left ul li a{	
+		text-decoration: none;
+		color: #707070;	
+	}
+	.head-left ul li a:hover{
+		color: #343434;
+	}	
+	.head-right{
+		position: absolute;	
+		right: 100px;
+		top: 0;
+		height: 100%;
+	}
+	.head-right a{	
+		text-decoration: none;
+		color: #707070;
+	}
+	.head-right ul li:first-child{
+		border-left: 1px solid #ddd;	
+	}
+	.head-right ul li{
+		display: inline-block;
+		padding: 0 20px;
+		height: 100px;
+		border-right: 1px solid #ddd;	
+	}
+	.head-right ul{
+		line-height: 100px;
+	}
+	.head-right ul li:first-child{
+		position: relative;
+		left: 5px;
+	}
+	.head-right ul li:hover{
+		color: #343434;
+		cursor: pointer;
+		background-color: #fffded;
+	}
+	.head-right ul li span{
+		visibility: hidden;
+		font-size: 0px;		
+	}
+	@keyframes fadeInText{
+		from{
+			font-size: 0px;
+			visibility: hidden;
+		}
+		to{
+			font-size: 16px;
+			visibility: visible;
+		}
+	}
+
+	@keyframes fadeOutText{
+		from{
+			font-size: 16px;
+			visibility: visible;
+		}
+		to{
+			font-size: 0px;
+			visibility: hidden;
+		}
+	}
+	#menu{
+		line-height: 100px;	
+		font-style: italic;	
+		display: none;		
+	}
+	#menu .fas{
+		padding: 3px;	
+		cursor: pointer;			
+	}
+	/*end-header*/
+	#dropDown-shop{	
+		font-size: 14px;
+		width: 100%;	
+		background-color: #fffded;
+		position: fixed;
+		top: 100px;
+		display: none;	
+		/*visibility: hidden;*/
+		box-shadow: 0 .2px 6px #ddd;
+		padding: 0px 50px;
+		line-height: 30px;
+		box-sizing: border-box;
+		z-index: 99;
+	}
+	#dropDown-shop ul li:first-child{
+		border-bottom: 1px solid #ddd;
+	}
+	#img-shop div{
+		width: 16rem;
+		overflow: hidden;
+	}
+	#img-shop img{
+		width: 16rem;
+		transition: 1s;
+	}
+	#img-shop img:hover{
+		transform: scale(1.2);
+	}
+	@keyframes fadeIn{
+		from {
+			opacity: 0;
+			transform: translate(0px,10px);
+		}
+		to {
+			opacity: 1;
+			transform: translate(0px,0px);
+		}
+	}
+	@keyframes fadeOut{
+		from {
+			opacity: 1;
+			transform: translate(0px,0px);
+		}
+		to {
+			opacity: 0;
+			transform: translate(0px,10px);
+			z-index: -999;
+		}
+	}
+	#women-shop li:first-child, #men-shop li:first-child, #kid-shop li:first-child{	
+		color: #333;		
+	}
+	#women-shop li, #men-shop li, #kid-shop li{
+		list-style-type: none;	
+		cursor: pointer;
+	}
+	#women-shop li:hover, #men-shop li:hover, #kid-shop li:hover{
+		color: #000;
+	}
+	#women-shop, #men-shop, #kid-shop, #img-shop{
+		padding: 20px 10px;
+		flex: 1;
+		border-left: 1px solid #ddd;
+	}
+	#women-shop{
+		border: 0;
+	}
+	/*end header*/
+
+	/*sidebar*/
+	.sidebar{
+		position: fixed;
+		z-index: 999;
+		box-shadow: 3px 2px 10px #000;
+		top: 0;
+		bottom: 0;
+		background-color: #fff;
+		width: 250px;
+		left: 0;
+		display: none;
+	}
+	#sidebar-head{
+		padding: 15px 20px;	
+		margin-bottom: 20px;
+	}
+	#sidebar-body ul li{	
+		margin: 10px 20px;
+		padding: 3px 0;
+		list-style-type: none;
+		border-bottom: 1px solid #ddd;
+		cursor: pointer;
+		padding: 10px 0;
+	}
+	#sidebar-body ul li a{
+		color: #707070;
+		text-decoration: none;
+	}
+	#sidebar-head h2{
+		display: inline-block;
+		font-family: 'cremona';
+	}
+	#close-sidebar{
+		cursor: pointer;
+		font-size: 15px;
+		float: right;	
+		padding: 1px 5px;
+		background-color: rgba(0,0,0,.7);
+		color: #fff;
+	}
+	/*end-sidebar*/

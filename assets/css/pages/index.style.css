@@ -1,0 +1,318 @@
+	
+	/*banner*/
+	#banner{
+		height: 100%;	
+		background-color: #201335;
+		background-image: url('../../img/banner.jpg');
+		background-size: cover;
+		background-position: center;  
+	}
+	#banner > div h1{
+		font-family: "Constantia";
+		font-size: 40px;
+		line-height: 50px;
+	}
+	#banner > div{
+		height: 100%;
+		padding: 0 20%;	
+		padding-top: 100px;	
+		background-color: rgba(0,0,0,.7);
+	}
+	#categories-img{
+		display: flex;
+	}
+	.wrapper{
+		height: 80%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		line-height: 25px;
+	}
+	.wrapper > div{
+		text-align: center;
+		color: rgb(225,225,255);
+	}
+	.wrapper > div > div{
+		display: flex;
+		justify-content: center;
+	}
+	#mainButton1, #mainButton2{	
+		border: 1px solid #4f4789;
+		width: auto;
+		padding: 10px;
+		display: inline-block;
+		text-align: center;
+		margin: 10px;
+	}
+	#mainButton2{
+		background-color: #4f4789;
+	}
+	#mainButton1{
+		border: 1px solid #fff;
+	}
+	#categories-img > div{
+		flex: 1;
+		border: 1px solid #fff;
+		height: 300px;
+	}
+	#categoriesImg1 div,#categoriesImg2 div,#categoriesImg3 div{
+		transition: all .4s;
+		position: relative;
+		height: 300px;
+	}
+	#categories-img #categoriesImg1{
+		background-image: url('../../img/categories/bg-2.jpg');	
+		background-size: cover;		
+		background-position: center center;
+		
+	}
+	#categories-img #categoriesImg2{
+		background-image: url(../../img/categories/bg-3.jpg);
+		background-size: cover;
+		background-position: center center;
+
+	}
+	#categories-img #categoriesImg3{
+		background-image: url(../../img/categories/bg-4.jpg);
+		background-size: cover;
+		background-position: center center;
+
+	}
+
+	#categories-img #categoriesImg1:hover div, #categories-img #categoriesImg2:hover div, #categories-img #categoriesImg3:hover div{
+		background-color: rgba(0,0,0,.7);
+	}
+	#categoriesImg1 p, #categoriesImg2 p, #categoriesImg3 p{
+		text-align: center;		
+		font-size: 30px;
+		color: #fff;
+		font-weight: bold;	
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.left-corner-categories{
+		padding: 5px 10px;
+	 	display: inline-block;
+	 	/*border: 1px solid red;*/
+	 	position: absolute;
+	 	bottom: -10px;
+	 	opacity: 0;
+	 	left: 10px;
+	 	background-color: #fff;
+	 	font-weight: bold;
+	 	border-radius: 5px;
+	 	transition: .2s;
+
+	}
+	.right-corner-categories{
+		padding: 5px 10px;
+	 	display: inline-block;	 	
+	 	position: absolute;
+	 	bottom: -10px;
+	 	opacity: 0;
+	 	right: 10px;
+	 	background-color: #fff;
+	 	font-weight: bold;
+	 	border-radius: 5px;
+	 	transition: .2s;
+	}
+	#categories-img #categoriesImg1:hover span, #categories-img #categoriesImg2:hover span, #categories-img #categoriesImg3:hover span{
+		bottom: 10px;
+		opacity: 1;
+	}
+
+	/*end-banner*/
+
+	/*promotion*/
+	div.ads{
+		margin: 20px 30px;
+		position: relative;
+		height: 300px;
+		background-image: url(../../img/ads.png);
+		background-size: 100% 300px;
+		background-position: center center;
+	}
+	.ads > div{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		width: 50%;		
+		height: 100%;
+		padding: 10px;
+		box-sizing: border-box;
+		color: #333;		
+		display: flex;
+		justify-content: center;		
+		flex-direction: column;
+	}
+	.ads > div > div{
+		background-color: #201335;
+		width: 120px;
+		padding: 7px 10px;
+		color: #ddd;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size: 25px;
+	}
+	/*end promotion*/
+
+	/*content*/
+	.container{	
+		padding: 10px 30px;
+		line-height: 25px;
+		color: #333;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.container main{
+		padding: 10px;
+		flex: 3;
+		margin-right: 5px;
+	}
+
+	.container aside{	
+		padding: 10px;
+		flex: 1;
+		margin-left: 5px;	
+
+	}
+	aside h1{
+		margin-bottom: 10px;
+	}
+	section{
+		display: flex;
+		flex-direction: row;	
+	}
+	section .product{	
+		padding: 10px;
+		width: 25%;
+		flex: 1;
+	}
+	.brand-name{
+		color: #707070;
+		font-weight: bold;
+	}
+
+	section .product img{
+		width: 100%;
+		border: 2px solid #fff;
+	}
+	span.price{
+		display: block;
+		margin-bottom: 20px;
+	}
+	.product div.button-buy{	
+		height: 40px;
+		background-color: #4f4789;	
+		margin: auto;
+		color: #fff;
+		line-height: 40px;
+		text-align: center;
+		margin-top: 10px;
+		cursor: pointer;
+	}
+	aside ul{		
+		padding: 10px 25px;
+	}
+	aside ul li ol{
+		margin-left: 40px;
+	}
+	.container input{
+		padding: 2.5px 5px;
+		height: 27px;
+		box-sizing: border-box;
+	}
+	.search-btn{	
+		background-color: #555;	
+		/*border: 1px solid red;*/
+		width: 50px;
+		height: 27px;
+		cursor: pointer;	
+		color: #fff;
+		text-align: center;	
+		display: inline-block;
+
+
+	}
+	.search-btn:hover{	
+		background-color: #666;
+	}
+	aside table td{
+		padding: 3px;
+	}
+	#recent-blogs{
+		display: flex;
+		flex-direction: column;
+		height: 880px;
+		/*align-items: center;*/
+	}
+	.card{
+		flex: 1;
+		/*border:1px solid red;*/
+		overflow: hidden;
+		margin-top: 10px;
+		border-radius: 5px;
+		width: 16rem;
+		position: relative;
+	}
+	.card:hover img{
+		transform: scale(1.2);
+		filter: brightness(50%);
+	}
+	.card:before{
+		width: 100%;
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 150px;
+		background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.5));
+	}
+	.card img{
+		position: absolute;
+		transition: .25s;
+		width: 100%;
+		z-index: -9;
+		/*display: none;*/
+	}
+	.card .text-blog{
+		color: #fff;
+		bottom: -100px;
+		left: 10px;
+		right: 10px;
+		position: absolute;
+		transition: .25s;
+	}
+	.card .text-blog p{
+		opacity: 0;
+		text-align: justify;
+		/*padding-right: 10px;*/
+	}
+	.card:hover .text-blog{
+		bottom: 10px;
+	}
+	.card:hover p{
+		opacity: 1;
+		font-size: 13px;
+	}
+	.seemoreblog{
+		padding: 3px 5px;
+		border: 2px solid #fff;
+		width: 30%;
+		text-align: center;
+		border-radius: 5px;
+		float: right;
+		transition: .25s;
+	}
+	.seemoreblog:hover{
+		background-color: #fff;
+		color: #000;
+		cursor: pointer;
+	}
+	/*end-content*/
+
+	

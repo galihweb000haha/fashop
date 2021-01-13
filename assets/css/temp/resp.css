@@ -1,0 +1,101 @@
+	
+	/*responsive*/
+	@media screen and (max-width: 1080px){
+		.container {
+			display: block;
+		}
+		.container aside{
+			margin: 10px 5px 0 0;
+		}
+		#modalLogin{
+			width: 50%;
+		}
+		#recent-blogs{
+			flex-direction: row;
+			height: auto;
+		}
+		#recent-blogs .card{
+			height: 16rem;
+			margin: 10px;
+		}
+	}
+
+	@media (max-width: 880px) {
+        .footer-distributed{
+            font: bold 14px sans-serif;
+        }
+        .footer-distributed .footer-left,
+        .footer-distributed .footer-center,
+        .footer-distributed .footer-right{
+            display: block;
+            width: 100%;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .footer-distributed .footer-center i{
+            margin-left: 0;
+        }
+    }
+
+    @media screen and (max-width: 850px){
+		.head-left ul{
+			display: none;
+		}
+		.head-right #link-right{
+			display: none;
+		}	
+
+		#menu{
+			display: block;
+		}
+		#brands{
+			flex-direction: column;		
+			
+		}
+		.brands{
+			margin-bottom: 80px;		
+
+		}
+		.brands:last-child{
+			margin-bottom: 0;
+		}
+		div.ads{
+			background-image: url(../../img/ads-850px.png);
+		}
+		#blog-container{
+			flex-direction: column;
+			
+		}
+		section.blog .card{
+			height: 360px;
+		}
+		
+	}
+
+	@media screen and (max-width: 680px){
+		section{
+			flex-direction: column;
+		}
+		section .product{
+			width: 95%;
+		}
+		#modalLogin{
+			width: 80%;
+		}
+		#categories-img{
+			display: block;
+		}		
+		#recent-blogs{
+			flex-direction: column;
+			height: 720px;
+			align-items: center;
+		}
+		#recent-blogs .card{
+			height: 16rem;
+		}
+		div.ads{
+			background-image: url("../../img/ads-580x200.png");
+			height: 200px;
+			background-size: 100% 200px;
+		}
+	}

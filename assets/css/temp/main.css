@@ -1,0 +1,108 @@
+	
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	html{
+		overflow-x: hidden;
+		font-family: arial;
+		height: 100%;	
+		color: #707070;	
+	}
+	body{
+		height: 100%;
+		font-size: 14px;
+	}
+
+	.visible{
+		transition: 1s;
+		display: block;
+	}
+	.hidden{
+		transition: 1s;	
+		display: none;	
+	}
+	.flex{
+		display: flex;
+	}
+
+	#viewMore{
+		float: right;
+	}
+
+	#containerModal{
+		position: fixed;	
+		background-color: rgba(0,0,0,.4);	
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 99999;	
+	}
+	#modalLogin{
+		position: relative;
+		background-color: #333;
+		top: 50px;		
+		width: 30%;
+		padding: 20px;
+		margin: auto;
+		color: #fff;
+		padding-top: 40px;
+
+	}
+	#modalLogin h2{
+		text-align: center;
+	}
+	#modalLogin input{
+		font-size: 15px;
+		display: block;
+		margin: auto;
+		margin-top: 20px;
+		border-top: 0;
+		border-left: 0;
+		border-right: 0;
+		border-bottom: 2px solid #000;
+		background-color: #806f66;
+		padding: 5px;		
+	}
+	#modalLogin input::placeholder{
+		color: #000;
+	}
+	#modalLogin #login-img{
+		width: 250px;
+		height: 250px;
+		border-radius: 100%;
+		background-color: #ccc;
+		margin: auto;
+		margin-top: 20px;
+		text-align: center;
+		line-height: 250px;
+	}
+	#modalLogin #login-btn{
+		width: 195px;
+		background-color: #ff0000;
+		color: #fff;
+		text-align: center;
+		margin: auto;
+		padding: 6px 5px;
+		margin-top: 20px;
+		cursor: pointer;
+		margin-bottom: 20px;
+	}
+	#modalLogin a{
+		color: #fff;
+		text-decoration: none;
+	}
+	#modalLogin span#closeModalButton{
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 20px;
+		font-size: 20px;
+		cursor: pointer;
+	}
+
+
+	
+
+	
