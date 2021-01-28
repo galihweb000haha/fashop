@@ -40,10 +40,13 @@
 					<td>PRODUCT</td>
 					<td align="right">TOTAL</td>
 				</tr>	
+				<?php for($i=0; $i < (count($_COOKIE)-1); $i++) : ?>
 				<tr>
-					<td>MONITOR LG 24 IN</td>
+					<td><?=$_COOKIE['id'.$i]?></td>
 					<td align="right">$120.00</td>
 				</tr>
+				<?php endfor; ?>
+
 				<tr>
 					<td>SUBTOTAL</td>
 					<td align="right">$120.00</td>

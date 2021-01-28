@@ -83,7 +83,8 @@ while ($res = mysqli_fetch_array($result)) {
 	$nama = $res['nama'];
 	$kategori = $res['kategori'];
     $brand = $res['brand'];
-    $harga = $res['harga'];
+	$harga = $res['harga'];
+	$deskripsi = $res['deskripsi'];
 	$image = $res['gambar'];
 }
 ?>
@@ -135,6 +136,14 @@ while ($res = mysqli_fetch_array($result)) {
                 <tr>
 					<td>Harga</td>
 					<td><input type="text" name="harga" value="<?php echo $harga; ?>"></td>
+				</tr>
+				<tr>
+					<td>Deskripsi</td>
+					<td>
+							<textarea name="deskripsi" id="deskripsi" cols="30" rows="10">
+									<?= $deskripsi ?>
+							</textarea>		
+					</td>
 				</tr>
 				<tr>
 					<td>Gambar</td>

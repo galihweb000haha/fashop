@@ -55,7 +55,7 @@
 			move_uploaded_file($filetmpname, $folder . $filename);
 
 			// MEMASUKAN DATA DATA + NAMA GAMBAR KE DALAM DATABASE
-			$result = mysqli_query($mysqli, "INSERT INTO barang VALUES('', '$nama', '$kategori', '$brand', '$harga' ,'$filename', '$deskripri')");
+			$result = mysqli_query($mysqli, "INSERT INTO barang VALUES('', '$nama', '$kategori', '$brand', '$harga' ,'$filename', '$deskripsi')");
 
 			// MENAMPILKAN PESAN BERHASIL
 			echo "<font color='green'>Data Berhasil ditambahkan.";
